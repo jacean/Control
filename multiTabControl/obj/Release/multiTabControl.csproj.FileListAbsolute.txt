@@ -8,3 +8,5 @@ E:\program\owner\multiTabControl\multiTabControl\bin\Release\multiTabControl.pdb
 E:\program\owner\multiTabControl\multiTabControl\obj\Release\ResolveAssemblyReference.cache
 E:\program\owner\multiTabControl\multiTabControl\obj\Release\multiTabControl.dll
 E:\program\owner\multiTabControl\multiTabControl\obj\Release\multiTabControl.pdb
+E:\program\owner\multiTabControl\multiTabControl\obj\Release\multiTabControl.Properties.Resources.resources
+E:\program\owner\multiTabControl\multiTabControl\obj\Release\multiTabControl.csproj.GenerateResource.Cache

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "multiTabControl", "multiTabControl\multiTabControl.csproj", "{24896DBB-032E-44AB-BB12-E42E18233BE4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlEX", "multiTabControl\ControlEX.csproj", "{24896DBB-032E-44AB-BB12-E42E18233BE4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TabDemo", "TabDemo\TabDemo.csproj", "{9CC1ED83-D5E4-4861-AC08-230D6CB04DB9}"
 EndProject

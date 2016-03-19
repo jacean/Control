@@ -1,0 +1,7 @@
+E:\program\owner\multiTabControl\multiTabControl\obj\Release\ResolveAssemblyReference.cache
+E:\program\owner\multiTabControl\multiTabControl\obj\Release\ControlEX.Properties.Resources.resources
+E:\program\owner\multiTabControl\multiTabControl\obj\Release\ControlEX.csproj.GenerateResource.Cache
+E:\program\owner\multiTabControl\multiTabControl\obj\Release\multiTabControl.dll
+E:\program\owner\multiTabControl\multiTabControl\bin\Release\multiTabControl.dll
+E:\program\owner\multiTabControl\multiTabControl\bin\Release\multiTabControl.pdb
+E:\program\owner\multiTabControl\multiTabControl\obj\Release\multiTabControl.pdb

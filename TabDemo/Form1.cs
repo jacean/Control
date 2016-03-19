@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using ControlEX;
 
 namespace TabDemo
 {
@@ -14,6 +15,12 @@ namespace TabDemo
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TabControlEX te = new TabControlEX();
+            this.Controls.Add(te);
         }
     }
 }

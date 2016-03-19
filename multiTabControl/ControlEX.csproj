@@ -8,7 +8,7 @@
     <ProjectGuid>{24896DBB-032E-44AB-BB12-E42E18233BE4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>multiTabControl</RootNamespace>
+    <RootNamespace>ControlEX</RootNamespace>
     <AssemblyName>multiTabControl</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -49,11 +49,58 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controlSize.cs" />
+    <Compile Include="panelEX.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="multiTabControl.cs">
+    <Compile Include="TabControlEX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TabPageEX.cs">
       <SubType>Component</SubType>
     </Compile>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_16px.ico">
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_16px_with_cirle.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\J_Letter_16px.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flag_new_16px.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rounded_rectangle_48px.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bloglovin_24px.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rectangle_light_blue_24px_1073273_easyicon.net.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rectangle_pinterest_72px_1066456_easyicon.net.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rectangle_blue_32px_1073270_easyicon.net.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

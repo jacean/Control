@@ -6,13 +6,14 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Drawing.Design;
 
-namespace multiTabControl
+namespace ControlEX
 {
-    [ToolboxItem(true)]
-    public  class multiTabControl : TabControl
+    [ToolboxItem(true)]   
+    public  class TabControlEX : TabControl
     {
-        public multiTabControl()
+        public TabControlEX()
         {
             base.SetStyle(
              //ControlStyles.UserPaint |                      // 控件将自行绘制，而不是通过操作系统来绘制
@@ -32,8 +33,56 @@ namespace multiTabControl
             //this.Appearance = TabAppearance.FlatButtons;
             base.ItemSize = new Size(100, 20);
 
+
             
         }
+        protected override void CreateHandle()
+        {
+            base.CreateHandle();
+            //base.TabPages.Clear();
+            //int ininCount = base.TabCount;
+            //for (int i = 0; i < ininCount; i++)
+            //{
+            //    base.TabPages.RemoveAt(0);
+            //}
+            //TabPageCollection tc = new TabPageCollection(this);
+            //TabPageEX te = new TabPageEX();
+            //te.Text = "TabPageEX";
+            //tc.Add(te);
+            //te = new TabPageEX();
+            //te.Text = "New";
+            //tc.Add(te);
+            //base.SelectedIndex = 0;
+            
+        }
+
+        protected override void OnHandleCreated(EventArgs e)
+        {
+            base.OnHandleCreated(e);
+            
+        }
+
+        protected override void OnCreateControl()
+        {
+            base.OnCreateControl();
+            base.TabPages.Clear();
+            int ininCount = base.TabCount;
+            for (int i = 0; i < ininCount; i++)
+            {
+                base.TabPages.RemoveAt(0);
+            }
+            TabPageCollection tc = new TabPageCollection(this);
+            TabPageEX te = new TabPageEX();
+            te.Text = "TabPageEX";
+            tc.Add(te);
+            te = new TabPageEX();
+            te.Text = "New";
+            tc.Add(te);
+            base.SelectedIndex = 0;
+            
+
+        }
+
         private int TABPAGEHEIGHT = 20;
         private int ICONSIZE = 15;
 
@@ -67,42 +116,21 @@ namespace multiTabControl
                     {
                         e.Graphics.FillRectangle(b, myTabRect);
                     }
-                    e.Graphics.DrawString("New", this.Font, SystemBrushes.ControlText, myTabRect.X + iconsize + 2, myTabRect.Y + 5);
-                    this.TabPages[e.Index].Size = new Size(50, 20);
+                    e.Graphics.DrawString("  New  ", this.Font, SystemBrushes.ControlText, myTabRect.X + iconsize + 2, myTabRect.Y + 5);
+                  
                     return;
                 }
 
 
                 Rectangle iconRect = myTabRect;
-                iconRect.Offset(0,2);
-                iconRect.Width = iconsize;
-                iconRect.Height = iconsize;
-                //填充矩形框
-                //Color iconColor = e.State == DrawItemState.Selected ? Color.White : Color.White;
-                //using (Brush b = new SolidBrush(iconColor))
-                //{
-                //    e.Graphics.FillRectangle(b, iconRect);
-                //}
+              
+                iconRect.Width = 20;
+                iconRect.Height = 20;
+                
                 using (Pen p = new Pen(Color.Black))
                 {
-                    ////=============================================
-                    //自己画X
-                    ////"-"线
-                    Point p1 = new Point(iconRect.X + 3, iconRect.Y + 3);
-                    Point p2 = new Point(iconRect.X + iconRect.Width - 3, iconRect.Y +3);
-                    e.Graphics.DrawLine(p, p1, p2);
-                    
-                    //"|"线
-                    Point p3 = new Point(iconRect.X +3+(iconsize-6)/2, iconRect.Y + iconRect.Height);
-                    Point p4 = new Point(iconRect.X +3+ (iconsize-6 ) / 2, iconRect.Y + 3);
-                    e.Graphics.DrawLine(p, p3, p4);
-
-                    ////=============================================
-                    //使用图片
-                    //Bitmap bt = new Bitmap(image);
-                    //Point p5 = new Point(myTabRect.X, 4);
-                    //e.Graphics.DrawImage(bt, p5);
-                    //e.Graphics.DrawString(this.TabPages[e.Index].Text, this.Font, objpen.Brush, p5);
+                    Icon i = Properties.Resources.J_Letter_16px;                   
+                    e.Graphics.DrawIcon(i,iconRect);
                 }
 
 
@@ -130,23 +158,23 @@ namespace multiTabControl
                 //画关闭符号
                 using (Pen objpen = new Pen(Color.Black))
                 {
-                    ////=============================================
-                    //自己画X
-                    ////"\"线
-                    Point p1 = new Point(myTabRect.X + 3, myTabRect.Y + 3);
-                    Point p2 = new Point(myTabRect.X + myTabRect.Width - 3, myTabRect.Y + myTabRect.Height - 3);
-                    e.Graphics.DrawLine(objpen, p1, p2);
-                    //"/"线
-                    Point p3 = new Point(myTabRect.X + 3, myTabRect.Y + myTabRect.Height - 3);
-                    Point p4 = new Point(myTabRect.X + myTabRect.Width - 3, myTabRect.Y + 3);
-                    e.Graphics.DrawLine(objpen, p3, p4);
- 
-                    ////=============================================
+                    #region 手动画线
+                    //////=============================================
+                    ////自己画X
+                    //////"\"线
+                    //Point p1 = new Point(myTabRect.X + 3, myTabRect.Y + 3);
+                    //Point p2 = new Point(myTabRect.X + myTabRect.Width - 3, myTabRect.Y + myTabRect.Height - 3);
+                    //e.Graphics.DrawLine(objpen, p1, p2);
+                    ////"/"线
+                    //Point p3 = new Point(myTabRect.X + 3, myTabRect.Y + myTabRect.Height - 3);
+                    //Point p4 = new Point(myTabRect.X + myTabRect.Width - 3, myTabRect.Y + 3);
+                    //e.Graphics.DrawLine(objpen, p3, p4);
+                    #endregion
+                    //=============================================
                     //使用图片
-                    //Bitmap bt = new Bitmap(image);
-                    //Point p5 = new Point(myTabRect.X, 4);
-                    //e.Graphics.DrawImage(bt, p5);
-                    //e.Graphics.DrawString(this.TabPages[e.Index].Text, this.Font, objpen.Brush, p5);
+                    Icon bt = Properties.Resources.Close_16px_with_cirle;
+                    Point p5 = new Point(myTabRect.X, 4);
+                    e.Graphics.DrawIcon(bt, myTabRect);
                 }
                 e.Graphics.Dispose();
             }
@@ -183,7 +211,7 @@ namespace multiTabControl
                 }
             }
 
-
+            controlSize.MyMouseDown(e);
 
         }
         public  struct movePoint {
@@ -200,6 +228,54 @@ namespace multiTabControl
         {
            
             base.OnMouseMove(e);
+
+            int x = e.X, y = e.Y;
+            Rectangle myTabRect=new Rectangle();
+            Color bacColor = Color.White;
+            bool isInCatogery = false;
+            for (int i = 0; i < base.TabCount-1; i++)
+            {//计算关闭区域   
+                myTabRect = this.GetTabRect(i);
+                if (myTabRect.Contains(e.Location)) {
+                    if (base.SelectedIndex == i) { bacColor = Color.White; } else {bacColor= Color.CornflowerBlue; }
+                    isInCatogery = true;
+                    break; }
+            }
+            if (isInCatogery)
+            {
+                myTabRect.Offset(myTabRect.Width - (ICONSIZE + 3), 2);
+                myTabRect.Width = ICONSIZE;
+                myTabRect.Height = ICONSIZE;
+
+                bool isClose = x > myTabRect.X && x < myTabRect.Right && y > myTabRect.Y && y < myTabRect.Bottom;
+                if (isClose == true)
+                {
+                    using (Pen objpen = new Pen(Color.Black))
+                    {
+                        Icon bt = Properties.Resources.close_16px;
+                        Graphics g = base.CreateGraphics();
+                        using (Brush b = new SolidBrush(bacColor))
+                        {
+                            g.FillRectangle(b, myTabRect);
+                        }
+                        g.DrawIcon(bt, myTabRect);
+                    }
+                }
+                else
+                {
+                    using (Pen objpen = new Pen(Color.Black))
+                    {
+                        Icon bt = Properties.Resources.Close_16px_with_cirle;
+                        Graphics g = base.CreateGraphics();
+                        using (Brush b = new SolidBrush(bacColor))
+                        {
+                            g.FillRectangle(b, myTabRect);
+                        }
+                        g.DrawIcon(bt, myTabRect);
+                    }
+                }
+
+            }
             if (isDrag&&!isMoving)
             {
                 //当鼠标移动5px方圆再确定移动
@@ -229,6 +305,9 @@ namespace multiTabControl
                 moveTabControl.Left = e.Location.X + base.Left + mp.leftToClick;
                 moveTabControl.Top = e.Location.Y + base.Top + mp.topToClick;
             }
+
+            controlSize.MyMouseMove(this,e);
+
         }
         protected override void OnMouseUp(MouseEventArgs e)
         {
@@ -283,6 +362,14 @@ namespace multiTabControl
             isDrag = false;
             isMoving = false;
             canNew = true;
+
+        
+        }
+
+        protected override void OnMouseLeave(EventArgs e)
+        {
+            base.OnMouseLeave(e);
+            controlSize.MyMouseLeave(e);
         }
 
         protected override void OnSelectedIndexChanged(EventArgs e)
@@ -290,16 +377,19 @@ namespace multiTabControl
             base.OnSelectedIndexChanged(e);
             if (this.IsHandleCreated&&canNew)
             {
+                if (base.SelectedIndex < 0) return;
                 if (this.SelectedIndex == this.TabPages.Count - 1)
                 {
                     //MessageBox.Show(this.SelectedIndex.ToString()+"::::"+this.TabCount.ToString());
-                    this.SelectedTab.Text = "newTab"+count++.ToString();
-                    TabPage newTab = new TabPage();
+                    this.SelectedTab.Text = "newTabEX"+count++.ToString();
+                    //TabPage newTab = new TabPage();
+                    TabPageEX newTab = new TabPageEX();
                     newTab.Text = "New";
                     this.TabPages.Add(newTab);
                 }
             }
         }
+               
       
     }
 }

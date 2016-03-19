@@ -6,5 +6,5 @@ E:\program\owner\multiTabControl\TabDemo\bin\Release\TabDemo.exe
 E:\program\owner\multiTabControl\TabDemo\bin\Release\TabDemo.pdb
 E:\program\owner\multiTabControl\TabDemo\obj\Release\TabDemo.exe
 E:\program\owner\multiTabControl\TabDemo\obj\Release\TabDemo.pdb
-E:\program\owner\multiTabControl\TabDemo\bin\Release\multiTabControl.dll
 E:\program\owner\multiTabControl\TabDemo\bin\Release\multiTabControl.pdb
+E:\program\owner\multiTabControl\TabDemo\bin\Release\multiTabControl.dll
