@@ -1,0 +1,12 @@
+C:\Documents and Settings\wjq\Local Settings\Application Data\Temporary Projects\multiTabControl\bin\Debug\multiTabControl.dll
+C:\Documents and Settings\wjq\Local Settings\Application Data\Temporary Projects\multiTabControl\bin\Debug\multiTabControl.pdb
+C:\Documents and Settings\wjq\Local Settings\Application Data\Temporary Projects\multiTabControl\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\wjq\Local Settings\Application Data\Temporary Projects\multiTabControl\obj\Debug\multiTabControl.multiTabControl.resources
+C:\Documents and Settings\wjq\Local Settings\Application Data\Temporary Projects\multiTabControl\obj\Debug\multiTabControl.csproj.GenerateResource.Cache
+C:\Documents and Settings\wjq\Local Settings\Application Data\Temporary Projects\multiTabControl\obj\Debug\multiTabControl.dll
+C:\Documents and Settings\wjq\Local Settings\Application Data\Temporary Projects\multiTabControl\obj\Debug\multiTabControl.pdb
+E:\program\owner\multiTabControl\multiTabControl\obj\Debug\ResolveAssemblyReference.cache
+E:\program\owner\multiTabControl\multiTabControl\bin\Debug\multiTabControl.dll
+E:\program\owner\multiTabControl\multiTabControl\bin\Debug\multiTabControl.pdb
+E:\program\owner\multiTabControl\multiTabControl\obj\Debug\multiTabControl.dll
+E:\program\owner\multiTabControl\multiTabControl\obj\Debug\multiTabControl.pdb

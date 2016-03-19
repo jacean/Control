@@ -1,0 +1,4 @@
+E:\program\owner\multiTabControl\TabDemo\obj\Release\ResolveAssemblyReference.cache
+E:\program\owner\multiTabControl\TabDemo\obj\Release\TabDemo.Form1.resources
+E:\program\owner\multiTabControl\TabDemo\obj\Release\TabDemo.Properties.Resources.resources
+E:\program\owner\multiTabControl\TabDemo\obj\Release\TabDemo.csproj.GenerateResource.Cache

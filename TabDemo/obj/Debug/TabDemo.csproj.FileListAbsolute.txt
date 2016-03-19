@@ -1,0 +1,10 @@
+E:\program\owner\multiTabControl\TabDemo\bin\Debug\TabDemo.exe
+E:\program\owner\multiTabControl\TabDemo\bin\Debug\TabDemo.pdb
+E:\program\owner\multiTabControl\TabDemo\bin\Debug\multiTabControl.dll
+E:\program\owner\multiTabControl\TabDemo\bin\Debug\multiTabControl.pdb
+E:\program\owner\multiTabControl\TabDemo\obj\Debug\ResolveAssemblyReference.cache
+E:\program\owner\multiTabControl\TabDemo\obj\Debug\TabDemo.Form1.resources
+E:\program\owner\multiTabControl\TabDemo\obj\Debug\TabDemo.Properties.Resources.resources
+E:\program\owner\multiTabControl\TabDemo\obj\Debug\TabDemo.csproj.GenerateResource.Cache
+E:\program\owner\multiTabControl\TabDemo\obj\Debug\TabDemo.exe
+E:\program\owner\multiTabControl\TabDemo\obj\Debug\TabDemo.pdb

@@ -1,0 +1,10 @@
+C:\Documents and Settings\wjq\Local Settings\Application Data\Temporary Projects\multiTabControl\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\wjq\Local Settings\Application Data\Temporary Projects\multiTabControl\bin\Release\multiTabControl.dll
+C:\Documents and Settings\wjq\Local Settings\Application Data\Temporary Projects\multiTabControl\bin\Release\multiTabControl.pdb
+C:\Documents and Settings\wjq\Local Settings\Application Data\Temporary Projects\multiTabControl\obj\Release\multiTabControl.dll
+C:\Documents and Settings\wjq\Local Settings\Application Data\Temporary Projects\multiTabControl\obj\Release\multiTabControl.pdb
+E:\program\owner\multiTabControl\multiTabControl\bin\Release\multiTabControl.dll
+E:\program\owner\multiTabControl\multiTabControl\bin\Release\multiTabControl.pdb
+E:\program\owner\multiTabControl\multiTabControl\obj\Release\ResolveAssemblyReference.cache
+E:\program\owner\multiTabControl\multiTabControl\obj\Release\multiTabControl.dll
+E:\program\owner\multiTabControl\multiTabControl\obj\Release\multiTabControl.pdb
