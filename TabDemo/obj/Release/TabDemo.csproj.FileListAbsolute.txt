@@ -2,3 +2,9 @@ E:\program\owner\multiTabControl\TabDemo\obj\Release\ResolveAssemblyReference.ca
 E:\program\owner\multiTabControl\TabDemo\obj\Release\TabDemo.Form1.resources
 E:\program\owner\multiTabControl\TabDemo\obj\Release\TabDemo.Properties.Resources.resources
 E:\program\owner\multiTabControl\TabDemo\obj\Release\TabDemo.csproj.GenerateResource.Cache
+E:\program\owner\multiTabControl\TabDemo\bin\Release\TabDemo.exe
+E:\program\owner\multiTabControl\TabDemo\bin\Release\TabDemo.pdb
+E:\program\owner\multiTabControl\TabDemo\obj\Release\TabDemo.exe
+E:\program\owner\multiTabControl\TabDemo\obj\Release\TabDemo.pdb
+E:\program\owner\multiTabControl\TabDemo\bin\Release\multiTabControl.dll
+E:\program\owner\multiTabControl\TabDemo\bin\Release\multiTabControl.pdb

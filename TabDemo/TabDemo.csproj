@@ -35,7 +35,7 @@
   <ItemGroup>
     <Reference Include="multiTabControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\multiTabControl\bin\Debug\multiTabControl.dll</HintPath>
+      <HintPath>..\multiTabControl\bin\Release\multiTabControl.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
