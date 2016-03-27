@@ -178,7 +178,7 @@ namespace ControlEX
                         Cursor.Current = Cursors.Arrow;        //'箭头  
                         break;
                     case EnumMousePointPosition.MouseDrag:
-                        Cursor.Current = Cursors.SizeAll;      //'四方向  
+                        //Cursor.Current = Cursors.SizeAll;      //'四方向  ,避免鼠标悬浮即变化，因为使用不仅仅在设计模式
                         break;
                     case EnumMousePointPosition.MouseSizeBottom:
                         Cursor.Current = Cursors.SizeNS;       //'南北  

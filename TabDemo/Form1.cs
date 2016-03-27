@@ -22,5 +22,10 @@ namespace TabDemo
             TabControlEX te = new TabControlEX();
             this.Controls.Add(te);
         }
+
+        private void closeTab_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -32,6 +32,7 @@ namespace ControlEX
             base.Padding = new System.Drawing.Point(ICONSIZE, 5);
             //this.Appearance = TabAppearance.FlatButtons;
             base.ItemSize = new Size(100, 20);
+            base.Size = new Size(500,400);
 
 
             
@@ -39,20 +40,7 @@ namespace ControlEX
         protected override void CreateHandle()
         {
             base.CreateHandle();
-            //base.TabPages.Clear();
-            //int ininCount = base.TabCount;
-            //for (int i = 0; i < ininCount; i++)
-            //{
-            //    base.TabPages.RemoveAt(0);
-            //}
-            //TabPageCollection tc = new TabPageCollection(this);
-            //TabPageEX te = new TabPageEX();
-            //te.Text = "TabPageEX";
-            //tc.Add(te);
-            //te = new TabPageEX();
-            //te.Text = "New";
-            //tc.Add(te);
-            //base.SelectedIndex = 0;
+     
             
         }
 
@@ -79,9 +67,61 @@ namespace ControlEX
             te.Text = "New";
             tc.Add(te);
             base.SelectedIndex = 0;
-            
 
+
+            ToolStripMenuItem closeItem = addMenuItem("关闭");
+            ToolStripMenuItem closeRightItems = addMenuItem("关闭右侧标签");
+            ToolStripMenuItem closeOtherItems = addMenuItem("关闭其他标签");
+            rMenu.Items.Add(closeItem);
+            closeItem.Click += new EventHandler(closeItem_Click);
+            rMenu.Items.Add(closeRightItems);
+            rMenu.Items.Add(closeOtherItems);
+            closeRightItems.Click += new EventHandler(closeRightItems_Click);
+            closeOtherItems.Click += new EventHandler(closeOtherItems_Click);
         }
+
+        void closeOtherItems_Click(object sender, EventArgs e)
+        {
+            //throw new NotImplementedException();
+            //TabPageEX tpe = (TabPageEX)base.SelectedTab;
+            TabPageEX tpe = (TabPageEX)base.TabPages[getMouseTabpage(mouseLocation)];
+            base.TabPages.Clear();
+            base.TabPages.Add(tpe);
+            TabPageEX te = new TabPageEX();
+            te.Text = "New";
+            base.TabPages.Add(te);
+        }
+
+        void closeRightItems_Click(object sender, EventArgs e)
+        {
+           // throw new NotImplementedException();
+            int count = base.TabPages.Count - 1;
+            //int i = base.SelectedIndex;
+            int i = getMouseTabpage(mouseLocation);
+            for (int j = i+1; j < count; j++)
+            {
+                base.TabPages.RemoveAt(i+1);
+            }
+            base.SelectedIndex = i;
+        }
+
+        void closeItem_Click(object sender, EventArgs e)
+        {
+           // throw new NotImplementedException();
+            TabPageEX tpe =(TabPageEX) base.SelectedTab;
+            int i = base.SelectedIndex;            
+            base.TabPages.Remove(tpe);
+            base.SelectedIndex= i-1;
+        }
+        private int getMouseTabpage(Point p) {
+            for (int i = 0; i < base.TabCount; i++)
+            {
+                if (base.GetTabRect(i).Contains(p)) return i;
+            }
+            return -1;
+        }
+
+        Point mouseLocation = new Point();
 
         private int TABPAGEHEIGHT = 20;
         private int ICONSIZE = 15;
@@ -93,6 +133,19 @@ namespace ControlEX
         }
         private bool  isDrag=false;
         private int count = 0;
+
+
+        private ContextMenuStrip rMenu = new ContextMenuStrip();
+     
+        private ToolStripMenuItem addMenuItem(string txt)
+        {
+            ToolStripMenuItem tm = new ToolStripMenuItem();
+            tm.Text = txt;
+            return tm;
+        }
+        
+
+
 
 
         protected override void  OnDrawItem(DrawItemEventArgs e)
@@ -210,8 +263,14 @@ namespace ControlEX
                 clickPoint = e.Location;
                 }
             }
+            if (e.Button == MouseButtons.Right) { 
+            //弹出右键菜单
+                Point point = Control.MousePosition;                
+                rMenu.Show(point);
+                mouseLocation = e.Location;
+            }
 
-            controlSize.MyMouseDown(e);
+            //controlSize.MyMouseDown(e);
 
         }
         public  struct movePoint {
@@ -306,7 +365,7 @@ namespace ControlEX
                 moveTabControl.Top = e.Location.Y + base.Top + mp.topToClick;
             }
 
-            controlSize.MyMouseMove(this,e);
+            //controlSize.MyMouseMove(this,e);
 
         }
         protected override void OnMouseUp(MouseEventArgs e)
@@ -369,7 +428,7 @@ namespace ControlEX
         protected override void OnMouseLeave(EventArgs e)
         {
             base.OnMouseLeave(e);
-            controlSize.MyMouseLeave(e);
+            //controlSize.MyMouseLeave(e);
         }
 
         protected override void OnSelectedIndexChanged(EventArgs e)
@@ -380,7 +439,6 @@ namespace ControlEX
                 if (base.SelectedIndex < 0) return;
                 if (this.SelectedIndex == this.TabPages.Count - 1)
                 {
-                    //MessageBox.Show(this.SelectedIndex.ToString()+"::::"+this.TabCount.ToString());
                     this.SelectedTab.Text = "newTabEX"+count++.ToString();
                     //TabPage newTab = new TabPage();
                     TabPageEX newTab = new TabPageEX();
